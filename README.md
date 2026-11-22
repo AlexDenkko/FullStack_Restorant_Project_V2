@@ -62,14 +62,6 @@ Responsiivinen verkkosovellus suomalaisten opiskelijaravintoloiden etsimiseen ja
 
 **Demotila:** `http://localhost:8000/?demo=1` näyttää fiktiivisiä ravintoloita ja ruokalistoja. Se ei vahvista oikean API:n tai käyttäjätoimintojen toimivuutta.
 
-## 🌍 GitHub Pages -julkaisu
-
-1. Siirrä projektin tiedostot repositorion juureen. Älä julkaise vanhan version `.env`-, `server.js`-, `database/`- tai `node_modules/`-tiedostoja.
-2. Tee commit ja puske muutokset `main`-haaraan.
-3. Avaa GitHubissa **Settings → Pages → Build and deployment** ja valitse **Source: GitHub Actions**.
-4. Tiedoston `.github/workflows/static.yml` työnkulku julkaisee sivuston automaattisesti. Seuraa suoritusta **Actions**-välilehdeltä.
-
-Suhteelliset tiedostopolut (`style.css`, `script.js`) toimivat myös GitHub Pagesin repositorio-alipolussa.
 
 ## ⚠️ API-yhteyden ongelmat GitHub Pagesissa
 
