@@ -1,0 +1,9 @@
+{
+  "name": "opiskelijalounas",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Vanilla JavaScript student restaurant app using the Metropolia REST API",
+  "scripts": {
+    "check": "node --check script.js"
+  }
+}
