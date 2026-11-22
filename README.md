@@ -82,7 +82,3 @@ https://media2.edu.metropolia.fi/restaurant/api/v1
 ## Rajoitukset suhteessa vanhaan versioon
 
 Koulun APIssa käyttäjäkohtainen suosikki on **yksi** ravintola. Vanhan MariaDB-version usean suosikin listaa ei voi säilyttää pilveen tallennettuna ilman toista tallennusratkaisua. Tässä toteutuksessa suosikin vaihto korvaa edellisen. Suosikin poistoon lähetetään `favouriteRestaurant: null`; palvelimen tuki on varmistettava oikealla testillä. Rekisteröinnin palauttama `activationUrl` näytetään, jos se on turvallinen HTTPS-linkki.
-
-## Tarkistukset
-
-Katso `docs/TESTAUS.md`. Ennen palautusta testaa selaimessa myös DevTools → Network: osoitteet ovat `media2.edu.metropolia.fi/restaurant/api/v1/...` eivätkä enää `/api?action=...`.
