@@ -2,7 +2,7 @@
 
 Responsiivinen verkkosovellus suomalaisten opiskelijaravintoloiden etsimiseen ja niiden päivä- ja viikkoruokalistojen selaamiseen. Käyttäjä voi myös kirjautua sisään, hallita profiiliaan ja valita suosikkiravintolan.
 
-**Toteutus:** HTML5, CSS3 ja Vanilla JavaScript (ES6+). Sovellus käyttää Metropolian REST API:a suoraan selaimesta – **ei omaa MariaDB-tietokantaa, Node.js/Express-taustapalvelinta eikä frontend-frameworkia**.
+**Toteutus:** HTML5, CSS3 ja Vanilla JavaScript (ES6+). Sovellus käyttää Metropolian REST API:a suoraan selaimesta.
 
 **🌐 [Avaa sovellus GitHub Pagesissa](https://alexdenkko.github.io/FullStack_Restorant_Project_V2/)**
 
@@ -39,8 +39,6 @@ Responsiivinen verkkosovellus suomalaisten opiskelijaravintoloiden etsimiseen ja
 | `style.css` | Ulkoasu, teemat ja responsiivisuus |
 | `script.js` | Käyttöliittymälogiikka ja API-kutsut |
 | `.github/workflows/static.yml` | GitHub Pages -julkaisutyönkulku |
-| `docs/KOODIN_SELISTYS.md` | Koodin ja API-toimintojen selitykset |
-| `docs/TESTAUS.md` | Testausohjeet ja rajoitukset |
 | `package.json` | Valinnainen syntaksitarkistus komennolla `npm run check` |
 
 ## 🚀 Käynnistäminen paikallisesti
@@ -156,13 +154,6 @@ const data = await response.json();
 
 Metropolian API:n `favouriteRestaurant`-kenttä sisältää **yhden ravintolan tunnisteen**, ei listaa. Uuden suosikin valitseminen korvaa edellisen.
 
-Vanhan MariaDB-version useita suosikkeja ei siksi tallenneta käyttäjätilille tässä toteutuksessa. Suosikin poistossa lähetetään `favouriteRestaurant: null`; palvelimen tuki on vielä varmistettava oikealla testillä.
-
-## 🧪 Testaus ja rajoitukset
-
-**Vahvistettu:** GitHub Pages -sivusto sekä ravintolatietojen API-yhteys toimivat Brave-selaimessa Metropolian VPN-yhteydellä, kun Local Network Access on sallittu.
-
-**Erikseen testattavat:** rekisteröinti ja aktivointi, kirjautuminen, suosikin poistaminen, profiilin päivitys, avatarin lopullinen URL sekä muut käyttäjätoiminnot oikeaa API:a vasten. Älä merkitse niitä hyväksytysti testatuiksi ennen varmistusta.
 
 Muita huomioita:
 
@@ -170,8 +161,6 @@ Muita huomioita:
 - Muut selaimet voivat käsitellä paikallisen verkon käyttöoikeuksia eri tavoin.
 - Yhden suosikkiravintolan rajoitus tulee koulun API:n tietomallista.
 - Rekisteröinnin palauttama `activationUrl` näytetään, jos se on turvallinen HTTPS-linkki.
-
-Lisätietoja: [`docs/TESTAUS.md`](docs/TESTAUS.md) ja [`docs/KOODIN_SELISTYS.md`](docs/KOODIN_SELISTYS.md).
 
 ---
 
